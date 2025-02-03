@@ -13,7 +13,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring.boot.version>2.5.12</spring.boot.version> <!-- Updated version -->
+        <spring.boot.version>2.5.12</spring.boot.version>
     </properties>
 
     <dependencyManagement>
@@ -41,7 +41,6 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <!-- <version>2.14.1</version> -->
         </dependency>
     </dependencies>
 
@@ -59,8 +58,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <mainClass>com.example.NumberClassificationApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,0 +1,4 @@
+com/example/controller/NumberClassificationControllerTest.class
+com/example/controller/DefaultControllerTest.class
+com/example/service/NumberClassificationServiceTest.class
+com/example/util/NumberUtilsTest.class
