@@ -23,7 +23,7 @@ public class NumberClassificationController {
     @GetMapping("/classify-number")
     public ResponseEntity<NumberProperties> classifyNumber(@RequestParam(required = false) String number) {
         if (number == null || number.isEmpty()) {
-            NumberProperties errorResponse = new NumberProperties("alphabet", true);
+            NumberProperties errorResponse = new NumberProperties("Number parameter is required", true);
             return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
         }
         try {
