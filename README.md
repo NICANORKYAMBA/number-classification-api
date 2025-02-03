@@ -72,7 +72,7 @@ number-classification-api
 ## Setup Instructions
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/NICANORKYAMBA/number-classification-api
    ```
 2. Navigate to the project directory:
    ```
