@@ -1,6 +1,8 @@
 package com.example.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import com.example.model.NumberProperties;
@@ -9,7 +11,8 @@ import com.example.util.NumberUtils;
 @Service
 public class NumberClassificationService {
 
-    private static final String FUN_FACT_API_URL = "http://numbersapi.com/";
+    @Value("${fun.fact.api.url}")
+    private String funFactApiUrl;
 
     public NumberProperties classifyNumber(int number) {
         boolean is_prime = NumberUtils.isPrime(number);
@@ -23,6 +26,10 @@ public class NumberClassificationService {
 
     private String getFunFact(int number) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(FUN_FACT_API_URL + number + "/math", String.class);
+        try {
+            return restTemplate.getForObject(funFactApiUrl + number + "/math", String.class);
+        } catch (RestClientException e) {
+            return "Fun fact not available";
+        }
     }
 }
