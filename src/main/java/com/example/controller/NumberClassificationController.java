@@ -21,7 +21,11 @@ public class NumberClassificationController {
     private NumberClassificationService numberClassificationService;
 
     @GetMapping("/classify-number")
-    public ResponseEntity<NumberProperties> classifyNumber(@RequestParam String number) {
+    public ResponseEntity<NumberProperties> classifyNumber(@RequestParam(required = false) String number) {
+        if (number == null || number.isEmpty()) {
+            NumberProperties errorResponse = new NumberProperties("alphabet", true);
+            return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        }
         try {
             int num = Integer.parseInt(number);
             NumberProperties properties = numberClassificationService.classifyNumber(num);
