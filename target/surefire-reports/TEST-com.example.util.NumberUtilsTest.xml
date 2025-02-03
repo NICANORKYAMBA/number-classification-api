@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.example.util.NumberUtilsTest" time="0" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.example.util.NumberUtilsTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -41,7 +41,7 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,7 +60,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase classname="com.example.util.NumberUtilsTest" name="com.example.util.NumberUtilsTest.testIsPrime" time="0"/>
+  <testcase classname="com.example.util.NumberUtilsTest" name="com.example.util.NumberUtilsTest.testIsPrime" time="0.001"/>
   <testcase classname="com.example.util.NumberUtilsTest" name="com.example.util.NumberUtilsTest.testIsPerfect" time="0"/>
   <testcase classname="com.example.util.NumberUtilsTest" name="com.example.util.NumberUtilsTest.testIsArmstrong" time="0"/>
   <testcase classname="com.example.util.NumberUtilsTest" name="com.example.util.NumberUtilsTest.testGetDigitSum" time="0"/>
