@@ -1,9 +1,0 @@
-com/example/config/WebConfig.class
-com/example/config/WebConfig$1.class
-com/example/service/NumberClassificationService.class
-com/example/NumberClassificationApplication.class
-com/example/controller/DefaultController$MessageResponse.class
-com/example/util/NumberUtils.class
-com/example/controller/DefaultController.class
-com/example/model/NumberProperties.class
-com/example/controller/NumberClassificationController.class
